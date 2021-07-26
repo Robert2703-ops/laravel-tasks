@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+    background: #34495E;
+}
+
+/* body */
+div.container {
+    width: 100%;
+    height: 100vh;
+    background: none; /* background: #34495E; */ 
+    /*  #D25F5D #D4514F #AE3F3D #D15C5A #5D6D7E-gray*/
+}
+
+div.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.flexContent {
+    width: 76%;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

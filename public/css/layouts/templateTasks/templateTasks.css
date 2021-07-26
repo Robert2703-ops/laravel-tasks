@@ -1,0 +1,118 @@
+.flexContent div {
+    background: white;
+    width: 100%;
+    height: 100%;
+}
+
+/* header */
+header.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header.header div {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+div.welcome {
+    width: 45%;
+}
+
+div.items {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.items div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+div.logout {
+    width: 15%;
+    margin-left: 5%;
+}
+
+/* tasks */
+div.tasks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+}
+
+div.tasksButtons {
+    height: 15%;
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tasksButtons button {
+    width: 22%;
+    height: 65%;
+    font-size: 20px;
+    /* color: white; */
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+/* .tasksButtons button#alltask {
+    background: rgb(39, 37, 37);
+    color: white;
+    border: 1px solid white;
+} */
+
+.tasksButtons button.Todo {
+    background-color: rgb(233, 81, 81);
+}
+
+.tasksButtons button.Doing {
+    background-color: #fdfd19;
+}
+
+.tasksButtons button.Done {
+    background-color: rgb(56, 231, 56);
+}
+
+div#taskTable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+table#tasks {
+    width: 95%;
+    border-top: 1px solid #34495E;
+    border-bottom: 1px solid #34495E;
+}
+
+/* table's body */
+th.status-ToDo {
+    color: rgb(233, 81, 81);
+}
+
+th.status-Doing {
+    color: #cfcf29;
+}
+
+th.status-Done {
+    color:rgb(56, 231, 56)
+}
+
+
+/* --options */
+div.options {
+    display: flex;
+}
+
+div.options button, input {
+    cursor: pointer;
+}
