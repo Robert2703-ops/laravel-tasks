@@ -31,7 +31,7 @@
 
             <div class="icon">
                 <input type="password" name="password">
-                <button type="button"><div><img src="/images/closed_eye.png"></div></button>
+                <button type="button"> <i class="far fa-eye-slash"></i></button>
             </div>
         </div>
         
@@ -40,8 +40,8 @@
 
             <div class="icon">
                 <input type="password" name="password">
-                <button type="button"><div><img src="/images/closed_eye.png"></div></button>
-            </div>
+                <button type="button"><i class="far fa-eye-slash"></i></button>
+            </div> 
         </div>
         
         <input type="submit" value="Change">

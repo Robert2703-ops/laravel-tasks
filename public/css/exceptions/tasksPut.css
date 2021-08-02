@@ -100,6 +100,15 @@ div.formContent {
     outline: none;
 }
 
+.status input[type="radio"] {
+    width: 25%;
+    transition: 0.25s;
+}
+
+.status input[type="radio"]:focus {
+    width: 35%;
+}
+
 /* show password */
 .formContent form div div {
     width: 90%;

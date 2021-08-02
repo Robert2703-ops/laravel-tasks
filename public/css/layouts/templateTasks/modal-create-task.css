@@ -1,0 +1,195 @@
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    z-index: 2000;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, .5);
+}
+
+.modal-container.show {
+    display: flex;
+}
+
+.modal {
+    background: white;
+
+    width: 40%;
+    min-width: 300px;
+    height: auto;
+
+    /* padding: 30px; */
+
+    position: relative;
+
+    border: 1px solid black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+
+    width: 50px;
+    height: 50px;
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+    border-radius: 50%;
+    border: none;
+
+    background: red;
+    color: white;
+
+    transition: 0.20s;
+}
+
+.close:hover {
+    background: white;
+
+    border: 1px solid red;
+
+    color: red;
+}
+
+
+/* animation */
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }   
+    
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.show .modal {
+    animation: modal .3s;
+}
+
+/* button create modal */
+.create-task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 10% !important;
+    
+    margin-top: 10px;
+}
+
+.create-task button {
+    width: 50%;
+    height: 85%;
+
+    color: white;
+    font-size: 18px;
+
+    background: rgb(26, 25, 25);
+
+    cursor: pointer;
+
+    transition: 0.15s ;
+
+    border: none;
+}
+
+.create-task button:hover {
+    background: white;
+
+    color: black;
+
+    border: 1px solid black;
+}
+
+/* create task form */
+
+.modal form {
+    width: 90%;
+}
+
+.modal form div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 15px;
+    margin-bottom: 22px;
+}
+
+.modal form div label, input {
+    font-size: 17px;
+}
+
+.modal form div input[type="text"], input[type="date"] {
+    border-radius: 10px;
+    
+    width: 55%;
+
+    outline: none;
+
+    transition: 0.35s;
+}
+
+.modal form div input[type="text"]:focus, input[type="date"]:focus {
+    width: 65%;
+}
+
+/* ---submit button */
+.modal form div input[type="submit"] {
+    background: #5D6D7E;
+    
+    color: white;
+    font-weight: 800;
+
+    width: 40%;
+    height: 40px;
+
+    border-radius: 10px;
+    border: none;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+
+    outline: none;
+}
+
+.modal form div input[type="submit"]:hover, .modal form div input[type="submit"]:focus {
+    background: white;
+
+    color: #5D6D7E;
+
+    border: 1px solid #5D6D7E;
+
+    width: 50%;
+}
+
+.modal h1 {
+    width: 100%;
+    
+    text-align: center;
+    color: white;
+
+    margin-top: 0px;
+
+    background: #5D6D7E;
+}
+

@@ -1,5 +1,5 @@
 .flexContent div {
-    background: white;
+    background: rgb(245, 240, 240);
     width: 100%;
     height: 100%;
 }
@@ -24,6 +24,7 @@ div.items {
     width: 40%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 div.items div {
@@ -32,9 +33,51 @@ div.items div {
     justify-content: flex-end;
 }
 
+/* ---logout */
 div.logout {
-    width: 15%;
+    width: 20%;
     margin-left: 5%;
+}
+
+div.logout form {
+    width: 100%;
+}
+
+div.logout form button[type="submit"] {
+    cursor: pointer;
+    
+    width: 80%;
+    height: 30px;
+
+    color: white;
+    
+    background: red;
+    border: none;
+
+    transition: 0.15s;
+
+    font-size: 16px;
+}
+
+div.logout form button[type="submit"]:hover {
+    background: white;
+    border: 1px solid red;
+
+    color: red;
+}
+
+
+/* ---User place */
+.userPlace a {
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+
+    transition: 0.15s;
+}
+
+.userPlace a:hover {
+    text-decoration: underline;
 }
 
 /* tasks */
@@ -63,29 +106,56 @@ div.tasksButtons {
     transition: 0.25s;
 }
 
-/* .tasksButtons button#alltask {
+.tasksButtons button#alltask {
     background: rgb(39, 37, 37);
     color: white;
     border: 1px solid white;
-} */
+}
+.tasksButtons button#alltask:hover {
+    background: white;
+    color: black;
+    border: 1px solid black;
+}
+
 
 .tasksButtons button.Todo {
     background-color: rgb(233, 81, 81);
 }
+.tasksButtons button.Todo:hover {
+    background: white;
+    border: 1px solid red;
+
+    color: red;
+}
 
 .tasksButtons button.Doing {
-    background-color: #fdfd19;
+    background-color: #f9fd19;
+}
+.tasksButtons button.Doing:hover {
+    background: white;
+    border: 1px solid #cccc08;
+
+    color: #cccc08;
 }
 
 .tasksButtons button.Done {
     background-color: rgb(56, 231, 56);
 }
+.tasksButtons button.Done:hover {
+    background: white;
+    border: 1px solid green;
+
+    color: green;
+}
+
 
 div#taskTable {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+
+    height: auto;
 }
 
 table#tasks {
@@ -104,7 +174,7 @@ th.status-Doing {
 }
 
 th.status-Done {
-    color:rgb(56, 231, 56)
+    color:rgb(56, 231, 56);
 }
 
 
@@ -113,6 +183,31 @@ div.options {
     display: flex;
 }
 
-div.options button, input {
+div.options button {
     cursor: pointer;
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+    transition: 0.15s;
+}
+
+/* ---done button */
+form.done button:hover {
+    background: rgb(56, 231, 56);
+    font-size: 22px;
+    color: white;
+}
+
+/* ---edit task button */
+div.edit button:hover {
+    background: #cccc08;
+    font-size: 22px;
+    color: white;
+}
+
+/* ---delete task button */
+form.delete button:hover {
+    background: red;
+    font-size: 22px;
+    color: white;
 }

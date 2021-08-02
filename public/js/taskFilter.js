@@ -34,7 +34,7 @@ function taskFilter (element)
             {
                 body = nodeList(row, 'tbody')
                 document.querySelector("#tasks tbody").replaceWith(body)
-                document.querySelector('#taskTable h3').innerText = "All tasks"
+                document.querySelector('#taskTable h2').innerText = "All tasks"
             }
 
             else
@@ -51,7 +51,7 @@ function taskFilter (element)
                 }
                 document.querySelector("#tasks tbody").replaceWith(elements)
                 document.querySelector('#tasks thead tr').replaceWith(thead)  
-                document.querySelector('#taskTable h3').innerText = text
+                document.querySelector('#taskTable h2').innerText = text
             }
         })
     }

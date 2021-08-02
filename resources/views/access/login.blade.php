@@ -22,7 +22,7 @@
             
             <div class="icon">
                 <input type="password" name="password">
-                <button type="button"><div><img src="/images/closed_eye.png"></div></button>
+                <button type="button"><i class="far fa-eye-slash"></i></button>
             </div>
         </div>
              

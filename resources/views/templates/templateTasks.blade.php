@@ -8,6 +8,11 @@
 
     <link rel="stylesheet" href="/css/layouts/defaultLayout.css">
     <link rel="stylesheet" href="/css/layouts/templateTasks/templateTasks.css">
+    <link rel="stylesheet" href="/css/layouts/templateTasks/modal-create-task.css">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
 </head>
 <body>
     <div class="container">
@@ -38,41 +43,64 @@
                         <div id="taskTable">
                             @yield('taskTable')
                         </div>
-                    </div>
-
-                    {{-- <div class="createTask">
-                        <div>
-                            <div class="closeWindow">
-                                <h1>criar tarefa</h1>
-                            </div>
-                            
-                            <div class="closeWindow">
-                                <button>❌</button>
-                            </div>
+                    
+                        <div class="create-task">
+                            <button type="button">create new task</button>
                         </div>
-
-                        @if ($errors->any())
-                            <div>
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
-
-
-                    <div>
-                        @yield('createTask')
-                    </div> --}}
+                    </div>
                 </div>
             </div>
         </div>
     </div>    
 
+
+    <div id="modal-create-task" class="modal-container">
+        <div class="modal">
+            <button type="button" class="close">X</button>
+
+            <h1>Create task</h1>
+
+            @if ($errors->any())
+                <h3 style="color: red">Please, don´t levae any blank fields!</h3>       
+            @endif
+
+            <form action="{{ route('createTask') }}" method="post">
+                @csrf
+        
+                <div>
+                    <label>Task title: </label>
+                    <input type="text" name="title">
+                </div>
+                
+                <div>
+                    <label>Task description: </label>
+                    <br>
+                    <textarea name="description" cols="20" rows="10" placeholder="Task's description"></textarea>
+                </div>
+                
+                <div>
+                    <label>Task's start: </label>
+                    <input type="date" name="start">
+                </div>
+                
+                <div>
+                    <label>Task's deadline: </label>
+                    <input type="date" name="deadline">
+                </div>
+                
+                <div>
+                    <input type="submit" value="Create">
+                </div>
+                
+            </form>
+
+        </div>
+    </div>
+
     <script src="js/taskFilter.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/buttonTask.js"></script>
     <script src="js/activeButton.js"></script>
+    <script src="js/modal-create-task.js"></script>
 </body>
 </html>

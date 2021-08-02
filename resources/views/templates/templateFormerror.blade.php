@@ -8,6 +8,9 @@
 
     <link rel="stylesheet" href="/css/layouts/defaultLayout.css">
     <link rel="stylesheet" href="/css/layouts/templateFormError/templateFormError.css">
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
 </head>
 <body>
     <div class="container">

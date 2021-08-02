@@ -1,59 +1,25 @@
-const buttonList = document.querySelectorAll('div.elementVerification button')
-const inputList = document.querySelectorAll('div.elementVerification input')
+const eyeButtons = document.querySelectorAll("div.icon button")
 
-for ( let index = 0; index < buttonList.length; index += 1 )
+for ( let index = 0; index  < eyeButtons.length; index += 1 )
 {
-    const button = buttonList[index]
-    const input = inputList[index]
+    eyeButtons[index].addEventListener('click', () => {
+        //changing the input´s type
+        eyeButtons[index].parentElement.firstElementChild.type = "text"
 
-    button.addEventListener('click', () => {
-        let div = document.querySelector('div.elementVerification')
-        div.classList.remove('class', 'elementVerification')
+        const newButton = document.createElement('button')
+        newButton.setAttribute('type', "button")
 
-        showPassword ( button, `div.${div.className}`,  input)
+        const newEye = document.createElement('i')
+        newEye.setAttribute('class', 'far fa-eye')
+
+        newButton.appendChild(newEye)
+
+        eyeButtons[index].replaceWith(newButton)
+
+        newButton.addEventListener('click', () => {
+            newButton.parentElement.firstElementChild.type = "password"
+
+            newButton.replaceWith(eyeButtons[index])
+        })
     })
-}
-
-
-function showPassword (element, elementPath, input)
-{
-    const imagePath = '/images/open_eye.png'
-    let newDiv = change(imagePath)
-    let newButton = createElement('button')
-    newButton.type = 'button'
-    newButton.appendChild(newDiv)
-
-    document.querySelector(`${elementPath} button`).replaceWith(newButton)
-    input.type = 'text'
-
-    newButton.addEventListener('click', () => {
-        document.querySelector(`${elementPath} button`).replaceWith(element)
-        document.querySelector(`${elementPath}`).classList.add('class', 'elementVerification')
-
-        input.type = 'password'
-    })
-}
-
-
-function change (pathEye)
-{
-    let div = createElement('div')
-    let image = changeImage(pathEye)
-
-    div.appendChild(image)
-
-    return div
-}
-
-function createElement (element)
-{
-    return document.createElement(element)
-}
-
-function changeImage (path)
-{
-    const image = createElement('img')
-    image.src = path
-
-    return image
 }
